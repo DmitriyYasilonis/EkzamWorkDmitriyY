@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.htmlelements.element.TextInput;
 
 
-    public class LoginPage extends ParentPage {public LoginPage(WebDriver webDriver) {super(webDriver, "/catalog/top");
+    public class LoginPage extends ParentPage {public LoginPage(WebDriver webDriver) {super(webDriver, "/system");
         }
 
     @FindBy(name = "username")
@@ -21,7 +21,7 @@ import ru.yandex.qatools.htmlelements.element.TextInput;
 
         public void openPage() {
             try {
-                webDriver.get("http://motomen.com.ua");
+                webDriver.get("http://motomen.com.ua/system");
                 logger.info("LoginPage was opened");
             } catch (Exception e) {
                 logger.error("Can not open LoginPage");

@@ -44,6 +44,9 @@ public class ParentTest {
         webDriwer.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         homePage = new HomePage(webDriwer);
+        loginPage = new LoginPage(webDriwer);
+        akciiPage = new AkciiPage(webDriwer);
+        productPage = new ProductPage(webDriwer);
     }
     @After
     public void tearDown() {webDriwer.quit();}
