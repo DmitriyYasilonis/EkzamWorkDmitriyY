@@ -1,7 +1,6 @@
 package parentTest;
 
-import pages.AkciiPage;
-import pages.HomePage;
+import pages.*;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -9,8 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import pages.LoginPage;
-import pages.ProductPage;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
@@ -24,6 +21,7 @@ public class ParentTest {
     protected LoginPage loginPage;
     protected AkciiPage akciiPage;
     protected ProductPage productPage;
+    protected PageWithFoundProduct pageWithFoundProduct;
 
     @Before
     public void setUP() {
@@ -47,6 +45,7 @@ public class ParentTest {
         loginPage = new LoginPage(webDriwer);
         akciiPage = new AkciiPage(webDriwer);
         productPage = new ProductPage(webDriwer);
+        pageWithFoundProduct = new PageWithFoundProduct(webDriwer);
     }
     @After
     public void tearDown() {webDriwer.quit();}

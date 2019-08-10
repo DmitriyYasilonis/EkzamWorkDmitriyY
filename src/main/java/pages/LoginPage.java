@@ -31,7 +31,7 @@ import ru.yandex.qatools.htmlelements.element.TextInput;
 
     public void loginWithCred(String login, String pass){
         openPage();
-        checkCurrentUrl();
+//        checkCurrentUrl();
         enterTextInToInputLogin(login);
         enterTextInToInputPassword(pass);
         clickOnButtonVhod();

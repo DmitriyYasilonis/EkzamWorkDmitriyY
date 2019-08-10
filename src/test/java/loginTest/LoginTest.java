@@ -8,14 +8,14 @@ public class LoginTest extends ParentTest {
     // V etom teste dumayu chto to naputal s URL (http://motomen.com.ua/system)
     @Test
     public void unvalidPassword() {
-        loginPage.loginWithCred("manager", "H256DFwjey73");
+        loginPage.loginWithCred("manager", "H256DFwjey");
         checkExpectedResult("Avatar shoud not be present"
                 , false
                 , loginPage.isAvatarPresent());
     }
 
-    @Test
-    public void validLogin() {
-        loginPage.openPage();
-    }
+//    @Test
+//    public void validLogin() {
+//        loginPage.openPage();
+//    }
 }

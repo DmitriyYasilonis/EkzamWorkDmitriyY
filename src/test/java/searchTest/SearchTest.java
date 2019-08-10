@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pages.PageWithFoundProduct;
 import parentTest.ParentTest;
 
 import java.io.File;
@@ -23,4 +24,15 @@ public class SearchTest extends ParentTest {
     }
 
 
+    @Test
+    public void NotEmptySearchAndSelect(){
+        homePage.openPage();
+        homePage.enterTextIntoSearchField("acerbis");
+        homePage.clickOnButtonMagnifier();
+        pageWithFoundProduct.clickOnFirstFoundProduct();
+        productPage.checkIsBuyDisplayed();
+        checkExpectedResult("Buy button is  present"
+                , true
+                , productPage.isBuyPresent());
+    }
 }

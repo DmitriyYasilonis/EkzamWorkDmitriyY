@@ -11,11 +11,11 @@ public class AkciiTest extends ParentTest {
         homePage.openPage();
         homePage.clickOnAkciiButton();
 
-        akciiPage.checkCurrentUrl();
+//        akciiPage.checkCurrentUrl();
         akciiPage.clickOnFirstProduct();
 
         productPage.checkIsBuyDisplayed();
-        productPage.checkCurrentUrl();
+//        productPage.checkCurrentUrl();
 
         checkExpectedResult("Buy button is  present"
                 , true

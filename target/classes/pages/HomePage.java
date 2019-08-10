@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import ru.yandex.qatools.htmlelements.element.TextInput;
 
 public class HomePage extends ParentPage {
     public HomePage(WebDriver webDriver) {
@@ -22,6 +23,8 @@ public class HomePage extends ParentPage {
     private WebElement avatar;
     @FindBy (xpath = ".//*[@class=\"wrap_topmenu\"]/a[2]")
     private WebElement AkciiButton;
+    @FindBy (xpath = ".//*[@class='input_search']")
+    private TextInput inputSearchText;
 
     public void openPage() {
         try {
@@ -61,4 +64,10 @@ public class HomePage extends ParentPage {
     public void clickOnAkciiButton() {
         actionsWithOurElements.clickOnElement(AkciiButton);
     }
+
+    public void enterTextIntoSearchField(String text) {
+        actionsWithOurElements.enterTextIntoInput(inputSearchText, text);
+    }
 }
+
+
